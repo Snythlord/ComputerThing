@@ -1,0 +1,25 @@
+from time import sleep
+print('Calculator v1.0 (Python 3.6.2)')
+ans = input('Hello! Are you here for calculating?(y/n) ')
+if ans == 'y':
+     print('OK! LOADING...')
+     sleep(0.8)
+elif ans == 'n':
+     print('Oh, you"re not going ahead... OK.')
+     quit()
+import operator # A module of functions that work like standard operators.
+
+# A table of symbols to operator functions. 
+op = {'+':operator.add,
+      '-':operator.sub,
+      '*':operator.mul,
+      '/':operator.truediv}
+
+
+num1 = int(input('Input 1st number: '))
+method = op[input('Input symbol(+,-,*,/):')]
+num2 = int(input('Input 2nd number: '))
+
+ans = method(num1,num2)
+
+print('Answer is ', ans)
